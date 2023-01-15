@@ -1,0 +1,20 @@
+Conqer the land is a counting game played with one deck of fifty-two cards.
+Players each create three armies trying to beat their rival army's value.
+
+Each player is dealt a hand of five cards.
+Next, three cards from the deck are placedfaceup in front of each side. These are soldiers in your three armies.
+Each army fights the one that's facing it. That's how the game begins. Players then take turns playing cards
+by putting them face-down behind one of their armies. An army's strength is the total value
+of the cards in a row. The more cards in a row the more powerful the army becomes.
+You can't tell the value of the facedown cards, of course so you have to guess your enemy's total power.
+
+Once an army reaches three or more cards they're all flipped over except the one farthest back.
+So you can add more cards to power up an army but you end up giving your enemy hints in the process.
+Once you use all your cards to create three armies it's time for battle! All cards are flipped over.
+On all three rows, the highest point total wins. The side that wins at least two showdowns wins the battle.
+
+Each card scores its numerical value except aces. In a duel, they count as one but they can also cancel
+out an opposing army's strongest face card. Use your aces right and you can totally turn the game around.
+
+
+			That's all. Press any button to go back to the menu :)

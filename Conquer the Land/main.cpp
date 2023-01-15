@@ -2,6 +2,7 @@
 #include <iostream>
 #include <windows.h>
 #include <conio.h>
+#include <fstream>
 #include "the_land.h"
 #include "player.h"
 #include "deck.h"
@@ -32,21 +33,13 @@ void rules()
 {
 	system("cls");
 	
-	cout << "Conqer the land is a counting game played with one deck of fifty-two cards." << endl;
-	cout << "Players each create three armies trying to beat their rival army's value." << endl << endl;
-	cout << "Each player is dealt a hand of five cards." << endl << "Next, three cards from the deck are placed ";
-	cout << "faceup in front of each side. These are soldiers in your three armies." << endl << "Each army fights ";
-	cout << "the one that's facing it. That's how the game begins. Players then take turns playing cards" << endl;
-	cout << "by putting them face-down behind one of their armies. An army's strength is the total value" << endl;
-	cout << "of the cards in a row. The more cards in a row the more powerful the army becomes." << endl;
-	cout << "You can't tell the value of the facedown cards, of course so you have to guess your enemy's total power." << endl << endl;
-	cout << "Once an army reaches three or more cards they're all flipped over except the one farthest back." << endl;
-	cout << "So you can add more cards to power up an army but you end up giving your enemy hints in the process." << endl;
-	cout << "Once you use all your cards to create three armies it's time for battle! All cards are flipped over." << endl;
-	cout << "On all three rows, the highest point total wins. The side that wins at least two showdowns wins the battle." << endl << endl;
-	cout << "Each card scores its numerical value except aces. In a duel, they count as one but they can also cancel" << endl;
-	cout << "out an opposing army's strongest face card. Use your aces right and you can totally turn the game around." << endl;
-	cout << endl << endl << "\t\t That's all. Press any button to go back to the menu :)";
+	fstream file;
+	string line;
+	file.open("rules.txt", ios::in);
+	
+	while(getline(file, line))
+		cout << line << endl;
+	file.close();
 	
 	getch();
 	
@@ -248,7 +241,7 @@ void turns(the_land battlefield, player Player, int index, player player1, playe
 	system("cls");
 	
 	cout << "\n\n\n\t\t\t\t\t       Player " << index << " turn" << endl;
-	cout << "\t\t\t\t\t\t  " << player1.points << " : " << player2.points << endl << endl;
+	cout << "\t\t\t\t\t\t   " << player1.points << " : " << player2.points << endl << endl;
 	cout << "\t\t\t\t" << player1.name;
 	
 	for(int i = 0; i < 43 - (player1.name).length() - (player2.name).length(); i++)
